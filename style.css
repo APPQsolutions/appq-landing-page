@@ -161,6 +161,77 @@ body {
   animation: fadeUp 0.7s ease-out 0.9s forwards;
 }
 
+.site-footer a {
+  color: var(--text-footer);
+  text-decoration: underline;
+}
+
+.site-footer a:hover {
+  color: var(--text-secondary);
+}
+
+.legal {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.legal-content {
+  max-width: 640px;
+  width: 100%;
+}
+
+.back-link {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--accent-start);
+  text-decoration: none;
+  margin-bottom: 32px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.legal-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.legal-updated {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--text-footer);
+  margin-bottom: 32px;
+}
+
+.legal-content h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text-primary);
+  margin-top: 28px;
+  margin-bottom: 10px;
+}
+
+.legal-content p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.legal-content a {
+  color: var(--accent-start);
+}
+
 @media (max-width: 480px) {
   .logo-main { font-size: 38px; }
   .logo-sub { font-size: 12px; letter-spacing: 6px; }
