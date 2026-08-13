@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://appq.pl/sitemap.xml
