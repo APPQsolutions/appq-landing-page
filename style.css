@@ -1,0 +1,121 @@
+:root {
+  --bg: #0B1220;
+  --text-primary: #EAF6FF;
+  --text-secondary: #8FA9C0;
+  --text-footer: #4A5A6E;
+  --accent-start: #4FD1FF;
+  --accent-end: #4F7CFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  font-family: 'Inter', sans-serif;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(79, 209, 255, 0.55) 0%, rgba(79, 124, 255, 0) 70%);
+  filter: blur(10px);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-main {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  letter-spacing: -1.5px;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.logo-sub {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 8px;
+  color: var(--accent-start);
+  margin-top: 6px;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin-top: 28px;
+  max-width: 420px;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 32px;
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  border: none;
+  color: var(--bg);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(79, 124, 255, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 32px rgba(79, 209, 255, 0.55);
+}
+
+.site-footer {
+  position: absolute;
+  bottom: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--text-footer);
+}
+
+@media (max-width: 480px) {
+  .logo-main { font-size: 38px; }
+  .logo-sub { font-size: 12px; letter-spacing: 6px; }
+  .tagline { font-size: 14px; }
+  .contact-button { padding: 12px 26px; font-size: 13px; }
+}
