@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APPQ Solutions — Mobile App Development Studio</title>
+  <meta name="description" content="APPQ Solutions is a mobile app development studio. We turn ideas into apps people love.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="hero">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1 class="logo">
+        <span class="logo-main">APPQ</span>
+        <span class="logo-sub">SOLUTIONS</span>
+      </h1>
+      <p class="tagline">We turn ideas into apps people love</p>
+      <a class="contact-button" href="mailto:appq.contact@gmail.com">Get in touch</a>
+    </div>
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> APPQ Solutions</p>
+    </footer>
+  </main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
