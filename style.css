@@ -42,6 +42,7 @@ body {
   filter: blur(10px);
   transform: translate(-50%, -50%);
   pointer-events: none;
+  animation: glowPulse 4s ease-in-out infinite;
 }
 
 .hero-content {
@@ -63,6 +64,8 @@ body {
   letter-spacing: -1.5px;
   color: var(--text-primary);
   line-height: 1;
+  opacity: 0;
+  animation: fadeUp 0.7s ease-out 0.1s forwards;
 }
 
 .logo-sub {
@@ -72,6 +75,8 @@ body {
   letter-spacing: 8px;
   color: var(--accent-start);
   margin-top: 6px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease-out 0.28s forwards;
 }
 
 .tagline {
@@ -81,12 +86,15 @@ body {
   color: var(--text-secondary);
   margin-top: 28px;
   max-width: 420px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease-out 0.46s forwards;
 }
 
 .contact-button {
   display: inline-block;
   margin-top: 32px;
-  background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+  background: linear-gradient(90deg, var(--accent-start), var(--accent-end), var(--accent-start));
+  background-size: 200% auto;
   border: none;
   color: var(--bg);
   font-family: 'Inter', sans-serif;
@@ -97,6 +105,8 @@ body {
   text-decoration: none;
   cursor: pointer;
   box-shadow: 0 4px 24px rgba(79, 124, 255, 0.35);
+  opacity: 0;
+  animation: fadeUp 0.7s ease-out 0.64s forwards, gradientShift 3.5s ease-in-out infinite;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -111,6 +121,8 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 12px;
   color: var(--text-footer);
+  opacity: 0;
+  animation: fadeUp 0.7s ease-out 0.9s forwards;
 }
 
 @media (max-width: 480px) {
@@ -118,4 +130,20 @@ body {
   .logo-sub { font-size: 12px; letter-spacing: 6px; }
   .tagline { font-size: 14px; }
   .contact-button { padding: 12px 26px; font-size: 13px; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.35; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.15); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
