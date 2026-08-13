@@ -21,11 +21,18 @@
       <p>This site is hosted on GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Like any web server, GitHub Pages automatically logs standard technical information for every visit — including your IP address — as part of normal hosting operations, for security and reliability. We do not have access to these logs beyond what GitHub provides as part of its hosting service. This processing is based on our legitimate interest in operating a secure and reliable website (Art. 6(1)(f) GDPR).</p>
 
       <h2>Data Controller</h2>
-      <p>APPQ Solutions<br>Email: <a href="mailto:appq.contact@gmail.com">appq.contact@gmail.com</a></p>
+      <p>APPQ Solutions<br>Email: <a id="privacy-email" href="#" rel="nofollow"></a></p>
 
       <h2>Your Rights</h2>
       <p>Since we collect no personal data beyond what GitHub processes as our hosting provider, there is little for us to hold or act on. If you have any question about this policy or how GitHub processes visitor data, contact us at the email address above.</p>
     </div>
   </main>
+  <script>
+    var emailUser = 'appq.contact';
+    var emailDomain = 'gmail.com';
+    var emailLink = document.getElementById('privacy-email');
+    emailLink.href = 'mailto:' + emailUser + '@' + emailDomain;
+    emailLink.textContent = emailUser + '@' + emailDomain;
+  </script>
 </body>
 </html>

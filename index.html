@@ -17,7 +17,7 @@
         <span class="logo-sub">SOLUTIONS</span>
       </h1>
       <p class="tagline">We turn ideas into apps people love</p>
-      <a class="contact-button" href="mailto:appq.contact@gmail.com">Get in touch</a>
+      <a class="contact-button" id="contact-btn" href="#" rel="nofollow">Get in touch</a>
     </div>
     <footer class="site-footer">
       <p>&copy; <span id="year"></span> APPQ Solutions · <a href="privacy.html">Privacy Policy</a></p>
@@ -25,6 +25,10 @@
   </main>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    var emailUser = 'appq.contact';
+    var emailDomain = 'gmail.com';
+    document.getElementById('contact-btn').href = 'mailto:' + emailUser + '@' + emailDomain;
   </script>
 </body>
 </html>
